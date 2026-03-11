@@ -12,12 +12,12 @@ const connectDB = require("./config/db");
 
 connectDB();
 
-const testRoutes = require("./routes/testRoutes");
+const authRoutes = require("./routes/authRoutes");
 
-app.use("/api", testRoutes);
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
-  res.send("BargainAI API Running");
+  res.send("Negotia API Running");
 });
 
 const PORT = process.env.PORT || 5000;
